@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "cp ./index.html ./hol.index.html && node ./config.index.js",
+    "postdev": "rm index.html && mv ./hol.index.html ./index.html",
     "postbuild": "./config.index.js"
   },
   "keywords": [],
