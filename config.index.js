@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 
@@ -9,8 +9,10 @@ function updateCSP(filename) {
       return console.log(err);
     }
 
-    const result = data.replace(/<@API_URLS@>/g, `https://myapi.com`);
-    console.log(result);
+    const result = data.replace(
+      /<@API_URLS@>/g,
+      `https://maps.googleapis.com/maps/api/js?key=${process.env.api_key}`
+    );
     fs.writeFile(`${filename}`, result, 'utf8', function (err) {
       if (err) return console.log(err);
     });
