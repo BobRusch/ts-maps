@@ -11,6 +11,7 @@ web-build/
 .cache/
 dist/
 .vscode/
+.env
 
 # macOS
 .DS_Store

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postbuild": "./config.index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,11 @@
     "@types/faker": "^5.5.3",
     "@types/googlemaps": "^3.43.3",
     "axios": "^0.21.1",
-    "faker": "^5.5.3"
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^7.0.2",
+    "faker": "^5.5.3",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.36.0"
   },
   "devDependencies": {
     "typescript": "^4.2.4"
